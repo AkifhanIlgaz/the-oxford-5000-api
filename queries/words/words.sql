@@ -2,6 +2,6 @@
 CREATE TABLE words (
     id SERIAL PRIMARY KEY,
     word TEXT NOT NULL,
-    uk_audio TEXT,
-    us_audio TEXT
+    part_of_speech_id INT REFERENCES parts_of_speech(id),
+    cefr_level_id INT REFERENCES cefr_levels(id)
 )
